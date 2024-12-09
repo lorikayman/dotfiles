@@ -29,6 +29,11 @@ sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply ironkayman
 
 Packages and flatpak applications that are installed on scrpt execution are specified at `run_once_install-packages.sh`
 
+### Tilix
+
+switch tabs | Ctrl Up/Dn
+switch panes | Alt Arrows
+
 ### Krita
 *`dot_var/app/org.kde.krita/config/private_kritashortcutsrc`*
 
