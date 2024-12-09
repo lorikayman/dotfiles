@@ -45,9 +45,11 @@ flatpak install \
 	org.gimp.GIMP \
 	org.kde.kwrite \
 	org.mozilla.firefox \
-	com.jgraph.drawio.desktop
+	com.jgraph.drawio.desktop \
+	org.shotcut.Shotcut
 
 cargo install \
 	ripgrep \
-	fd-find
+	fd-find \
+	viu
 
