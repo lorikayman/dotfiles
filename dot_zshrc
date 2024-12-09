@@ -49,7 +49,7 @@ zstyle :prompt:pure:prompt:success color '#29dcfb' #'#29cdfb'
 zstyle :prompt:pure:prompt:error color '#e13f00'
 zstyle :prompt:pure:execution_time color '#d9c68d'
 zstyle :prompt:pure:git:dirty color '#0098ff' #'#1cbbec'
-
+#zstyle :prompt:pure:git:action color '#f2c03f'
 
 # Plugin loaded with investigating.
 zi light zdharma-continuum/history-search-multi-word
@@ -104,12 +104,13 @@ alias gfetch='git fetch --all --tags'
 alias greset='git reset --hard'
 alias gclean='git clean -fdx'
 alias gsd='git diff --submodule=log'
+alias glog='git log --oneline --decorate --graph'
 alias glog-self='git log --author="$(git config user.name)"'
 
 alias gsu='git submodule updatre'
 alias gsf='git submodule update --force --rebase'
 
-alias v='nvim'
+alias v='vim'
 
 alias ll='ls -alF'
 alias la='ls -A'
