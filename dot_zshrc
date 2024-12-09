@@ -104,6 +104,7 @@ export VOLTA_HOME="$HOME/.volta"
 
 PATH="$VOLTA_HOME/bin:$PATH"
 PATH="./bin:$PATH"
+PATH="$HOME/.local/bin:$PATH"
 
 # REMINDER: git also available as g
 # git logs a cool-looking tree of oneleined commits
@@ -112,6 +113,7 @@ alias ggraph='git log --oneline --all --graph --decorate'
 alias ggraph-w-authors='git log --all --graph --decorate'
 alias gfetch='git fetch --all --tags'
 alias greset='git reset --hard'
+alias gclean='git clean -fdx'
 alias gsd='git diff --submodule=log'
 
 alias gsu='git submodule updatre'
