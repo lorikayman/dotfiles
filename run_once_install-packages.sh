@@ -6,12 +6,16 @@ sudo apt install \
 	zsh \
 	tilix \
 	apt-rdepends \
-	spice-vdagent
+	spice-vdagent \
+	cockpit cockpit-machines
 
 sudo apt remove firefox
 
 # zinit install
 sh -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+
+# volta Node version manager
+curl https://get.volta.sh | sh
 
 flatpak install \
 	org.kde.krita \
