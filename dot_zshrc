@@ -1,9 +1,9 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 
 ### Added by Zinit's installer
@@ -45,17 +45,15 @@ zi for \
 zstyle ':completion:*' menu select
 
 zstyle :prompt:pure:path color '#ea9b2c'
-zstyle :prompt:pure:prompt:success color '#29dcfb' #'#29cdfb'
+zstyle :prompt:pure:prompt:success color '#29dcfb'
 zstyle :prompt:pure:prompt:error color '#e13f00'
 zstyle :prompt:pure:execution_time color '#d9c68d'
-zstyle :prompt:pure:git:dirty color '#0098ff' #'#1cbbec'
-#zstyle :prompt:pure:git:action color '#f2c03f'
+zstyle :prompt:pure:git:dirty color '#0098ff'
 
 # Plugin loaded with investigating.
 zi light zdharma-continuum/history-search-multi-word
 zi light zdharma-continuum/fast-syntax-highlighting
 zi light zsh-users/zsh-history-substring-search
-
 
 # SHELL config END
 # ===================
@@ -68,8 +66,13 @@ setopt appendhistory
 
 # Traps and binds
 # -----------------
-bindkey "^[Od" backward-word
-bindkey "^[Oc" forward-word
+
+# omitted: / ( ) _ - =
+# added: " '
+export WORDCHARS="*?.[]~&;!#$%^{}<>'\""
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 # https://unix.stackexchange.com/questions/5293/how-do-i-jump-to-the-next-or-previous-word-with-ctrl-arrow-keys-in-a-console
 # Enable Ctrl+arrow key bindings for word jumping
@@ -93,6 +96,7 @@ PATH="$HOME/.local/bin:$PATH"
 # add locally built git-cinnabar
 # with makefile two symbolic links to git-cinnabar and git remote-hg are created so we target the source directory only
 PATH="$HOME/git/git-cinnabar:$PATH"
+PATH="$HOME/git/rust/lapce/target/release:$PATH"
 
 # doomemacs
 PATH="$HOME/.config/emacs/bin:$PATH"
