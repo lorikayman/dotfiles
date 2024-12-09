@@ -28,6 +28,8 @@ sh -c "$(curl --fail --show-error --silent --location https://raw.githubusercont
 curl https://get.volta.sh | sh
 # rust over rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# Task taskrunner
+sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b ~/.local/bin
 
 flatpak install \
 	org.kde.krita \
