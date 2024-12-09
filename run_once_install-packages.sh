@@ -12,7 +12,7 @@ sudo apt install \
 	libguestfs-tools \
 	p7zip-full \
 	make \
-    	dmg2img \
+    dmg2img \
 	tilix \
 	bleachbit \
 	apt-rdepends \
