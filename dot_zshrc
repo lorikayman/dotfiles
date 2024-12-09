@@ -120,6 +120,8 @@ alias cz='chezmoi'
 
 export PATH
 
+# scrollable less output with a wheel
+export LESS=-R
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
