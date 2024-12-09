@@ -12,4 +12,4 @@ Shell ([ZSH](https://wiki.archlinux.org/title/Zsh)) is configured with [Zinit](h
 
 ### .⚙️ Configurations
 
-- `[private_dot_mozilla/private_firefox/user.js.backup](https://github.com/ironkayman/dotfiles/blob/master/private_dot_mozilla/private_firefox/user.js.backup)` - Firefox user.js configuration profile overrides
+- [`private_dot_mozilla/private_firefox/user.js.backup`](https://github.com/ironkayman/dotfiles/blob/master/private_dot_mozilla/private_firefox/user.js.backup) - Firefox user.js configuration profile overrides
