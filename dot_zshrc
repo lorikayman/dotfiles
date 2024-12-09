@@ -125,6 +125,11 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# put on remote system with IP $4 as remotye user $3 with custom port $1 to rtemote path $5 from local path $2
+function rput() { rsync -ave 'ssh -p' + "$1" "$2" "$3"@"$4":"$5"; }
+# take file $4 from ip $3 as user $2 at port $1 to local path $5
+function rtake() { rsync -avz --rsh='ssh -p' + "$1" "$2"@"$3":"$4" "$5"; }
+
 alias cz='chezmoi'
 
 export PATH
