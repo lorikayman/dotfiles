@@ -2,3 +2,9 @@
 	submodulesummary = true
 [diff]
 	submodule = log
+[cinnabar]
+       version-check = 1688580274
+[alias]
+       change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
+[init]
+       defaultBranch = master
