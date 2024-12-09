@@ -19,5 +19,6 @@ flatpak install \
 	im.riot.Riot \
 	org.apache.directory.studio \
 	com.github.tchx84.Flatseal \
-	org.gimp.GIMP
+	org.gimp.GIMP \
+	org.kde.kwrite
 
