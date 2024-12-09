@@ -101,6 +101,8 @@ PATH="$HOME/git/rust/lapce/target/release:$PATH"
 # doomemacs
 PATH="$HOME/.config/emacs/bin:$PATH"
 
+alias t='task'
+
 alias g='git'
 # REMINDER: git also available as g
 # git logs a cool-looking tree of oneleined commits
