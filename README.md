@@ -1,5 +1,5 @@
 # dotfiles
-My dotfiles managed by chezmoi
+Dotfiles managed by [chezmoi](https://github.com/twpayne/chezmoi)
 
 Apply:
 ```sh
