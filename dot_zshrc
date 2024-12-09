@@ -11,7 +11,8 @@ PATH="./bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
 
 # add locally built git-cinnabar
-PATH="$HOME/git/git-cinnabar/target/release:$PATH"
+# with makefile two symbolic links to git-cinnabar and git remote-hg are created so we target the source directory only
+PATH="$HOME/git/git-cinnabar:$PATH"
 
 # REMINDER: git also available as g
 # git logs a cool-looking tree of oneleined commits
