@@ -134,6 +134,8 @@ export PATH
 # scrollable less output with a wheel
 export LESS=-R
 
+export SCCACHE_CACHE_SIZE=20G
+
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
@@ -143,3 +145,7 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-rust
 
 ### End of Zinit's installer chunk
+
+# Wasmer
+export WASMER_DIR="/home/kayman/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
