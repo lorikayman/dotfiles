@@ -135,7 +135,7 @@ alias gsd='git diff --submodule=log'
 alias glog='git log --oneline --decorate --graph'
 alias glog-self='git log --author="$(git config user.name)"'
 
-alias gsu='git submodule updatre'
+alias gsu='git submodule update'
 alias gsf='git submodule update --force --rebase'
 alias glog-lines='function _search_by_lines(){git log -L"$2","$3":"$1";};_search_by_lines'
 
@@ -160,3 +160,6 @@ export LESS=-R
 # ~/.cache/sccache size
 export SCCACHE_CACHE_SIZE=60G
 
+# Wasmer
+export WASMER_DIR="/home/kayman/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
