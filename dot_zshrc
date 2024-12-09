@@ -160,6 +160,3 @@ export LESS=-R
 # ~/.cache/sccache size
 export SCCACHE_CACHE_SIZE=60G
 
-# Wasmer
-export WASMER_DIR="/home/kayman/.wasmer"
-[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
