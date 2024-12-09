@@ -82,7 +82,6 @@ bindkey '^[[1;5D' backward-word    # Ctrl+left arrow
 # https://github.com/zsh-users/zsh-history-substring-search
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
-
 # -----------
 # PATH Setup
 # -----------
@@ -109,7 +108,7 @@ PATH="/usr/bin/flutter/bin/:$PATH"
 # PATH END
 # ----------
 
-alias tarx='tar --extract --file'
+alias tx='tar --extract --file'
 
 # taskfile
 # -------------------
