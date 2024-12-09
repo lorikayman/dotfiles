@@ -83,7 +83,7 @@ bindkey '^[[1;5D' backward-word    # Ctrl+left arrow
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
-
+# -----------
 # PATH Setup
 # -----------
 
@@ -95,8 +95,9 @@ PATH="$HOME/.local/bin:$PATH"
 
 # add locally built git-cinnabar
 # with makefile two symbolic links to git-cinnabar and git remote-hg are created so we target the source directory only
+PATH="$HOME/git/rust/lapce/target/release:$PATH"
 
-PATH="$HOME/git/git-cinnabar:$PATH"
+PATH="$HOME/git/rupost/desktop/git-cinnabar:$PATH"
 
 # doomemacs
 PATH="$HOME/.config/emacs/bin:$PATH"
@@ -104,10 +105,24 @@ PATH="$HOME/.config/emacs/bin:$PATH"
 # flutter
 PATH="/usr/bin/flutter/bin/:$PATH"
 
+# ----------
+# PATH END
+# ----------
+
 alias tarx='tar --extract --file'
 
+# taskfile
+# -------------------
 alias t='task'
 
+# rust-related
+# -------------------
+alias cr='cargo'
+alias crr='cargo run'
+alias crb='cargo build'
+
+# git
+# ------------------
 alias g='git'
 # REMINDER: git also available as g
 # git logs a cool-looking tree of oneleined commits
@@ -143,17 +158,8 @@ export PATH
 # scrollable less output with a wheel
 export LESS=-R
 
+# ~/.cache/sccache size
 export SCCACHE_CACHE_SIZE=60G
-
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
-
-### End of Zinit's installer chunk
 
 # Wasmer
 export WASMER_DIR="/home/kayman/.wasmer"
