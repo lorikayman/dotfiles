@@ -4,7 +4,17 @@ sudo apt install \
 	flatpak \
 	curl \
 	zsh \
+	qemu \
+	uml-utilities \
+	virt-manager \
+	git \
+	wget \
+	libguestfs-tools \
+	p7zip-full \
+	make \
+    	dmg2img \
 	tilix \
+	bleachbit \
 	apt-rdepends \
 	spice-vdagent \
 	cockpit cockpit-machines
