@@ -111,6 +111,7 @@ alias gsu='git submodule updatre'
 alias gsf='git submodule update --force --rebase'
 
 alias v='vim'
+alias fk='flatpak'
 
 alias ll='ls -alF'
 alias la='ls -A'
