@@ -23,6 +23,7 @@ alias gfetch='git fetch --all --tags'
 alias greset='git reset --hard'
 alias gclean='git clean -fdx'
 alias gsd='git diff --submodule=log'
+alias glog-self='git log --author="$(git config user.name)"'
 
 alias gsu='git submodule updatre'
 alias gsf='git submodule update --force --rebase'
@@ -37,3 +38,4 @@ alias cz='chezmoi'
 
 export PATH
 
+# eval "$(starship init zsh)"
