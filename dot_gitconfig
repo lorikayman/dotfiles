@@ -1,0 +1,4 @@
+[status]
+	submodulesummary = true
+[diff]
+	submodule = log
