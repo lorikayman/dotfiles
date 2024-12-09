@@ -8,7 +8,12 @@ sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply ironkayman
 ```
 
 ### 🌻 Shell:
-Shell ([ZSH](https://wiki.archlinux.org/title/Zsh)) is configured with [Zinit](https://github.com/zdharma-continuum/zinit) plugin manager.
+Shell ([ZSH](https://wiki.archlinux.org/title/Zsh)) is configured with [Zinit](https://github.com/zdharma-continuum/zinit) plugin manager and [Pure theme](https://github.com/sindresorhus/pure) recolor.
+
+<center>
+        <img style="width: 50%; margin: 4px; display: block;" src="./docs/color_scheme_example.png"/>
+</center>
+</br>
 
 ### .⚙️ Configurations
 
