@@ -26,6 +26,8 @@ sh -c "$(curl --fail --show-error --silent --location https://raw.githubusercont
 
 # volta Node version manager
 curl https://get.volta.sh | sh
+# rust over rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 flatpak install \
 	org.kde.krita \
@@ -42,4 +44,8 @@ flatpak install \
 	org.kde.kwrite \
 	org.mozilla.firefox \
 	com.jgraph.drawio.desktop
+
+cargo install \
+	ripgrep \
+	fd-find
 

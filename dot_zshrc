@@ -94,6 +94,9 @@ PATH="$HOME/.local/bin:$PATH"
 # with makefile two symbolic links to git-cinnabar and git remote-hg are created so we target the source directory only
 PATH="$HOME/git/git-cinnabar:$PATH"
 
+# doomemacs
+PATH="$HOME/.config/emacs/bin:$PATH"
+
 alias g='git'
 # REMINDER: git also available as g
 # git logs a cool-looking tree of oneleined commits
@@ -109,6 +112,7 @@ alias glog-self='git log --author="$(git config user.name)"'
 
 alias gsu='git submodule updatre'
 alias gsf='git submodule update --force --rebase'
+alias glog-lines='function _search_by_lines(){git log -L"$2","$3":"$1";};_search_by_lines'
 
 alias v='vim'
 alias fk='flatpak'
