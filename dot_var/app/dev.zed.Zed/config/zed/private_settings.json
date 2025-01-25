@@ -8,13 +8,49 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "features": {
-    "inline_completion_provider": "copilot"
+    "inlines_completion_provider": "copilot"
   },
+  "soft_wrap": "bounded",
+  "preferred_line_length": 60,
+  "hard_tabs": false,
+  "tab_size": 2,
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Atelier Plateau Dark"
+    "dark": "Atelier Cave Dark"
+  },
+  "base_keymap": "VSCode",
+
+  // LSP
+  "auto_install_extensions": {
+    "cspell": false
+  },
+  "languages": {
+    "C++": {
+      "language_servers": ["!cspell"]
+    },
+    "C": {
+      "language_servers": ["!cspell"]
+    },
+    "Go": {
+      "language_servers": ["!cspell"]
+    },
+    "Zig": {
+      "language_servers": ["!cspell"]
+    },
+    "JSONC": {
+      "language_servers": ["!cspell"]
+    },
+    "JavaScript": {
+      "language_servers": ["!cspell"]
+    },
+    "Python": {
+      "language_servers": ["!cspell"]
+    },
+    "Markdown": {
+      "language_servers": ["!cspell"]
+    }
   }
 }
