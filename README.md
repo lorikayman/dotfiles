@@ -2,7 +2,10 @@
 
 Dotfiles managed with [chezmoi](https://github.com/twpayne/chezmoi)
 
-> **WARNING**: Designed only for debian-based (since `apt`) systems, **Pop!_Os** specifically
+> [!CAUTION]
+> This is not intended to be used. Despite being a public repository and using chezmoi, __this set of configurations is not intended for you__, nor you likely won't gain much of using it due to personalized workflow.
+>
+> Configuration setup is designed for debian-based (since `apt`) systems, **Pop!_Os** specifically.
 
 Apply:
 
@@ -35,14 +38,29 @@ sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply ironkayman
 
 ## .⚙️ Configurations
 
-Packages and flatpak applications that are installed on script execution are specified at `run_once_install-packages.sh`.
+Packages and flatpak applications that are installed on script execution are specified at `run_once_install-packages.sh`. Major navigational changes a listed below.
 
 ### Tilix
 
 | Action        | Shortcut   |
 |:-------------:|:----------:|
-| Switch tabs   | Ctrl Up/Dn |
-| Switch panes  | Alt Arrows |
+| Switch panes | Alt Arrows |
+| Switch to tab to the Left/Right | Alt Shift Left/Right |
+| Copy selection | Ctrl c |
+| Paste selection | Ctrl v |
+
+### Zed
+
+*`.var/app/dev.zed.Zed/config/zed`*
+
+Zed default keymap, except for:
+
+| Action        | Shortcut   |
+|:-------------:|:----------:|
+| Workspace::Switch active panes | Alt Arrows |
+| Workspace::Switch to tab to the left/right | Alt Shift Left/Right |
+| Terminal::Copy selection | Ctrl c |
+| Terminal::Paste selection | Ctrl v |
 
 ### Krita
 
@@ -55,9 +73,9 @@ Packages and flatpak applications that are installed on script execution are spe
 | Zoom canvas             | Shift touch CLW |
 | Freehand selection tool | S               |
 | Freehand Brush mode     | B               |
-| Transform tool          | Ctrl T          |
-| Move tool               | T               |
-| Deselect                | Ctrl Shift A    |
+| Transform tool          | Ctrl t          |
+| Move tool               | t          |
+| Deselect                | Ctrl Shift a    |
 
 ### Firefox
 
@@ -70,12 +88,6 @@ Fine-tined [arkenfox's user.js](https://github.com/arkenfox/user.js) configurati
 *`.gitconfig`*
 
 Specified [Git Cinnabar](https://github.com/glandium/git-cinnabar) version commit
-
-### Zed
-
-*`.var/app/dev.zed.Zed/config/zed`*
-
-VS Code Keymaps and color theme
 
 ### Language Servers
 
