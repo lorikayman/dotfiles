@@ -3,7 +3,7 @@
 Dotfiles managed with [chezmoi](https://github.com/twpayne/chezmoi)
 
 > [!CAUTION]
-> This is not intended to be used. Despite being a public repository and using chezmoi, __this set of configurations is not intended for you__, nor you likely won't gain much of using it due to personalized workflow.
+> This is not intended to be used. Despite being a public repository, __this set of configurations is not intended for you__, nor do you likely gain much from using it due to personalized workflow.
 >
 > Configuration setup is designed for debian-based (since `apt`) systems, **Pop!_Os** specifically.
 
