@@ -61,6 +61,8 @@
   {
     "context": "Editor",
     "bindings": {
+      "ctrl-shift-up": "editor::MoveLineUp",
+      "ctrl-shift-down": "editor::MoveLineDown",
       "escape": "editor::Cancel",
       "backspace": "editor::Backspace",
       "shift-backspace": "editor::Backspace",
@@ -131,7 +133,6 @@
     }
   },
   {
-    // Separate block with same context so these display in context menus
     "context": "Editor",
     "bindings": {
       "ctrl-x": "editor::Cut",
@@ -269,8 +270,8 @@
   {
     "context": "Pane",
     "bindings": {
-      "ctrl-pageup": "pane::ActivatePrevItem",
-      "ctrl-pagedown": "pane::ActivateNextItem",
+      "alt-shift-left": "pane::ActivatePrevItem",
+      "alt-shift-right": "pane::ActivateNextItem",
       "ctrl-shift-pageup": "pane::SwapItemLeft",
       "ctrl-shift-pagedown": "pane::SwapItemRight",
       "ctrl-w": "pane::CloseActiveItem",
@@ -303,143 +304,6 @@
       "ctrl-k shift-enter": "pane::TogglePinTab"
     }
   },
-  // Bindings from VS Code
-  {
-    "context": "Editor",
-    "bindings": {
-      "ctrl-[": "editor::Outdent",
-      "ctrl-]": "editor::Indent",
-      "shift-alt-up": "editor::AddSelectionAbove", // Insert Cursor Above
-      "shift-alt-down": "editor::AddSelectionBelow", // Insert Cursor Below
-      "ctrl-shift-k": "editor::DeleteLine",
-      "alt-up": "editor::MoveLineUp",
-      "alt-down": "editor::MoveLineDown",
-      "ctrl-alt-shift-up": "editor::DuplicateLineUp",
-      "ctrl-alt-shift-down": "editor::DuplicateLineDown",
-      "alt-shift-right": "editor::SelectLargerSyntaxNode", // Expand Selection
-      "alt-shift-left": "editor::SelectSmallerSyntaxNode", // Shrink Selection
-      "ctrl-shift-l": "editor::SelectAllMatches", // Select all occurrences of current selection
-      "ctrl-f2": "editor::SelectAllMatches", // Select all occurrences of current word
-      "ctrl-d": [
-        "editor::SelectNext",
-        { "replace_newest": false }
-      ],
-      "ctrl-shift-down": [
-        "editor::SelectNext",
-        { "replace_newest": false }
-      ], // Add selection to Next Find Match
-      "ctrl-shift-up": [
-        "editor::SelectPrevious",
-        { "replace_newest": false }
-      ],
-      "ctrl-k ctrl-d": [
-        "editor::SelectNext",
-        { "replace_newest": true }
-      ],
-      "ctrl-k ctrl-shift-d": [
-        "editor::SelectPrevious",
-        { "replace_newest": true }
-      ],
-      "ctrl-k ctrl-i": "editor::Hover",
-      "ctrl-/": [
-        "editor::ToggleComments",
-        { "advance_downwards": false }
-      ],
-      "ctrl-u": "editor::UndoSelection",
-      "ctrl-shift-u": "editor::RedoSelection",
-      "f8": "editor::GoToDiagnostic",
-      "shift-f8": "editor::GoToPrevDiagnostic",
-      "f2": "editor::Rename",
-      "f12": "editor::GoToDefinition",
-      "alt-f12": "editor::GoToDefinitionSplit",
-      "ctrl-shift-f10": "editor::GoToDefinitionSplit",
-      "ctrl-f12": "editor::GoToTypeDefinition",
-      "shift-f12": "editor::GoToImplementation",
-      "alt-ctrl-f12": "editor::GoToTypeDefinitionSplit",
-      "alt-shift-f12": "editor::FindAllReferences",
-      "ctrl-m": "editor::MoveToEnclosingBracket",
-      "ctrl-shift-\\": "editor::MoveToEnclosingBracket",
-      "ctrl-shift-[": "editor::Fold",
-      "ctrl-shift-]": "editor::UnfoldLines",
-      "ctrl-k ctrl-l": "editor::ToggleFold",
-      "ctrl-k ctrl-[": "editor::FoldRecursive",
-      "ctrl-k ctrl-]": "editor::UnfoldRecursive",
-      "ctrl-k ctrl-1": [
-        "editor::FoldAtLevel",
-        { "level": 1 }
-      ],
-      "ctrl-k ctrl-2": [
-        "editor::FoldAtLevel",
-        { "level": 2 }
-      ],
-      "ctrl-k ctrl-3": [
-        "editor::FoldAtLevel",
-        { "level": 3 }
-      ],
-      "ctrl-k ctrl-4": [
-        "editor::FoldAtLevel",
-        { "level": 4 }
-      ],
-      "ctrl-k ctrl-5": [
-        "editor::FoldAtLevel",
-        { "level": 5 }
-      ],
-      "ctrl-k ctrl-6": [
-        "editor::FoldAtLevel",
-        { "level": 6 }
-      ],
-      "ctrl-k ctrl-7": [
-        "editor::FoldAtLevel",
-        { "level": 7 }
-      ],
-      "ctrl-k ctrl-8": [
-        "editor::FoldAtLevel",
-        { "level": 8 }
-      ],
-      "ctrl-k ctrl-9": [
-        "editor::FoldAtLevel",
-        { "level": 9 }
-      ],
-      "ctrl-k ctrl-0": "editor::FoldAll",
-      "ctrl-k ctrl-j": "editor::UnfoldAll",
-      "ctrl-space": "editor::ShowCompletions",
-      "ctrl-.": "editor::ToggleCodeActions",
-      "ctrl-k r": "editor::RevealInFileManager",
-      "ctrl-k p": "editor::CopyPath",
-      "ctrl-\\": "pane::SplitRight",
-      "ctrl-k v": "markdown::OpenPreviewToTheSide",
-      "ctrl-shift-v": "markdown::OpenPreview",
-      "ctrl-alt-shift-c": "editor::DisplayCursorNames"
-    }
-  },
-  {
-    "context": "Editor && mode == full",
-    "bindings": {
-      "ctrl-shift-o": "outline::Toggle",
-      "ctrl-g": "go_to_line::Toggle"
-    }
-  },
-  {
-    "context": "Pane",
-    "bindings": {
-      "alt-1": ["pane::ActivateItem", 0],
-      "alt-2": ["pane::ActivateItem", 1],
-      "alt-3": ["pane::ActivateItem", 2],
-      "alt-4": ["pane::ActivateItem", 3],
-      "alt-5": ["pane::ActivateItem", 4],
-      "alt-6": ["pane::ActivateItem", 5],
-      "alt-7": ["pane::ActivateItem", 6],
-      "alt-8": ["pane::ActivateItem", 7],
-      "alt-9": ["pane::ActivateItem", 8],
-      "alt-0": "pane::ActivateLastItem",
-      "ctrl-alt--": "pane::GoBack",
-      "ctrl-alt-_": "pane::GoForward",
-      "ctrl-shift-t": "pane::ReopenClosedItem",
-      "f3": "search::SelectNextMatch",
-      "shift-f3": "search::SelectPrevMatch",
-      "ctrl-shift-f": "project_search::ToggleFocus"
-    }
-  },
   {
     "context": "Workspace",
     "bindings": {
@@ -454,15 +318,6 @@
       "ctrl-n": "workspace::NewFile",
       "ctrl-shift-n": "workspace::NewWindow",
       "ctrl-`": "terminal_panel::ToggleFocus",
-      "alt-1": ["workspace::ActivatePane", 0],
-      "alt-2": ["workspace::ActivatePane", 1],
-      "alt-3": ["workspace::ActivatePane", 2],
-      "alt-4": ["workspace::ActivatePane", 3],
-      "alt-5": ["workspace::ActivatePane", 4],
-      "alt-6": ["workspace::ActivatePane", 5],
-      "alt-7": ["workspace::ActivatePane", 6],
-      "alt-8": ["workspace::ActivatePane", 7],
-      "alt-9": ["workspace::ActivatePane", 8],
       "ctrl-alt-b": "workspace::ToggleRightDock",
       "ctrl-b": "workspace::ToggleLeftDock",
       "ctrl-j": "workspace::ToggleBottomDock",
@@ -491,19 +346,19 @@
       "ctrl-alt-s": "workspace::SaveAll",
       "ctrl-k m": "language_selector::Toggle",
       "escape": "workspace::Unfollow",
-      "ctrl-k ctrl-left": [
+      "alt-left": [
         "workspace::ActivatePaneInDirection",
         "Left"
       ],
-      "ctrl-k ctrl-right": [
+      "alt-right": [
         "workspace::ActivatePaneInDirection",
         "Right"
       ],
-      "ctrl-k ctrl-up": [
+      "alt-up": [
         "workspace::ActivatePaneInDirection",
         "Up"
       ],
-      "ctrl-k ctrl-down": [
+      "alt-down": [
         "workspace::ActivatePaneInDirection",
         "Down"
       ],
@@ -528,37 +383,6 @@
       "ctrl-alt-r": "task::Rerun",
       "alt-t": "task::Rerun",
       "alt-shift-t": "task::Spawn"
-    }
-  },
-  // Bindings from Sublime Text
-  {
-    "context": "Editor",
-    "bindings": {
-      "ctrl-shift-k": "editor::DeleteLine",
-      "ctrl-shift-d": "editor::DuplicateLineDown",
-      "ctrl-shift-j": "editor::JoinLines",
-      "ctrl-alt-backspace": "editor::DeleteToPreviousSubwordStart",
-      "ctrl-alt-h": "editor::DeleteToPreviousSubwordStart",
-      "ctrl-alt-delete": "editor::DeleteToNextSubwordEnd",
-      "ctrl-alt-d": "editor::DeleteToNextSubwordEnd",
-      "ctrl-alt-left": "editor::MoveToPreviousSubwordStart",
-      // "ctrl-alt-b": "editor::MoveToPreviousSubwordStart",
-      "ctrl-alt-right": "editor::MoveToNextSubwordEnd",
-      "ctrl-alt-f": "editor::MoveToNextSubwordEnd",
-      "ctrl-alt-shift-left": "editor::SelectToPreviousSubwordStart",
-      "ctrl-alt-shift-b": "editor::SelectToPreviousSubwordStart",
-      "ctrl-alt-shift-right": "editor::SelectToNextSubwordEnd",
-      "ctrl-alt-shift-f": "editor::SelectToNextSubwordEnd"
-    }
-  },
-  // Bindings from Atom
-  {
-    "context": "Pane",
-    "bindings": {
-      "ctrl-k up": "pane::SplitUp",
-      "ctrl-k down": "pane::SplitDown",
-      "ctrl-k left": "pane::SplitLeft",
-      "ctrl-k right": "pane::SplitRight"
     }
   },
   // Bindings that should be unified with bindings for more general actions
