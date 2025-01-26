@@ -16,7 +16,7 @@ keybind = ctrl+q=close_surface
 keybind = alt+q=close_surface
 
 shell-integration = zsh
-shell-integration-features = no-cursor,no-sudo,no-title
+shell-integration-features = no-cursor,no-sudo,title
 
 window-height = 20
 window-width = 66
