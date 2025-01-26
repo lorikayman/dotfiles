@@ -161,5 +161,7 @@ export LESS=-R
 export SCCACHE_CACHE_SIZE=60G
 
 # Wasmer
-export WASMER_DIR="/home/kayman/.wasmer"
+export WASMER_DIR="$HOME/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+eval "$(zellij setup --generate-auto-start zsh)"
