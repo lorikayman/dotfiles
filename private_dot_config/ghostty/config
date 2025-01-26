@@ -24,7 +24,9 @@ window-width = 66
 keybind = ctrl+v=paste_from_clipboard
 keybind = alt+v=paste_from_clipboard
 #keybind = unconsumed:ctrl+c=copy_to_clipboard
-#keybind = alt+c=copy_to_clipboard
+keybind = alt+c=copy_to_clipboard
 
 confirm-close-surface=false
 
+background = #181818
+unfocused-split-opacity = 0.9
