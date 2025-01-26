@@ -40,22 +40,27 @@ sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply ironkayman
 
 Packages and flatpak applications that are installed on script execution are specified at `run_once_install-packages.sh`. Major navigational changes a listed below.
 
-### Ghostty + Zellij
+### Ghostty
 
-*`~/.config/ghostty`* / *`~/.config/zellij`*
+*`~/.config/ghostty`*
 
-Ghostlly works as terminal emulator and multiplexer, while Zellij partially captures truncated inputs and allows for session detachment. 
-
+Ghostlly works as terminal emulator and multiplexer.
 
 | Action        | Shortcut   |
 |:-------------:|:----------:|
 | Switch panes | Alt Arrows |
-| Switch to tabs | Alt Ctrl Left/Right |
+| Switch tabs | Alt Ctrl Left/Right |
 | Copy selection | Alt c |
 | Paste selection | Ctrl/Alt v |
 | Create pane | Alt Shift Arrows |
 | Create tab | Alt t |
 | Close tab/pane | Alt q |
+
+### Zellij
+
+*`~/.config/zellij`*
+
+Zellij partially captures truncated inputs and allows for session detachment.
 
 ### Tilix
 
