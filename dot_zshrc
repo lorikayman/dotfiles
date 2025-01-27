@@ -147,6 +147,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias cz='chezmoi'
+alias zl='zellij'
 
 # zig C/C++ compiler replacement
 alias zcc="zig cc"
