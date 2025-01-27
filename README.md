@@ -40,11 +40,11 @@ sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply ironkayman
 
 Packages and flatpak applications that are installed on script execution are specified at `run_once_install-packages.sh`. Major navigational changes a listed below.
 
-### Ghostty
+### [Ghostty](https://github.com/ghostty-org/ghostty)
 
 *`~/.config/ghostty`*
 
-Ghostlly works as terminal emulator and multiplexer.
+Ghostty works as terminal emulator and multiplexer.
 
 | Action        | Shortcut   |
 |:-------------:|:----------:|
@@ -56,13 +56,13 @@ Ghostlly works as terminal emulator and multiplexer.
 | Create tab | Alt t |
 | Close tab/pane | Alt q |
 
-### Zellij
+### [Zellij](https://github.com/zellij-org/zellij)
 
 *`~/.config/zellij`*
 
 Zellij partially captures truncated inputs and allows for session detachment.
 
-### Tilix
+### [Tilix](https://github.com/gnunn1/tilix/)
 
 | Action        | Shortcut   |
 |:-------------:|:----------:|
@@ -71,7 +71,7 @@ Zellij partially captures truncated inputs and allows for session detachment.
 | Copy selection | Ctrl c |
 | Paste selection | Ctrl v |
 
-### Zed
+### [Zed](https://github.com/zed-industries/zed)
 
 *`.var/app/dev.zed.Zed/config/zed`*
 
@@ -84,7 +84,7 @@ Zed default keymap, except for:
 | Terminal::Copy selection | Ctrl c |
 | Terminal::Paste selection | Ctrl v |
 
-### Krita
+### [Krita](https://krita.org/en/)
 
 *`.var/app/org.kde.krita/config/private_kritashortcutsrc`*
 
