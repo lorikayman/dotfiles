@@ -33,6 +33,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 curl -LsSf https://astral.sh/uv/install.sh | sh
 # Task taskrunner
 sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b ~/.local/bin
+# ollama
+curl -fsSL https://ollama.com/install.sh | sh
 
 flatpak install \
 	org.kde.krita \
@@ -56,3 +58,5 @@ cargo install \
 	ripgrep \
 	fd-find \
 	viu
+cargo install --locked \
+  zellij
