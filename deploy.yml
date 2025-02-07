@@ -1,0 +1,106 @@
+version: "3"
+
+vars:
+  PKGS_REMOVE: "firefox"
+  PKGS_TOOLS_BASE: "
+    flatpak \
+    zsh \
+    git \
+    curl \
+    wget"
+  PKGS_VT: "
+    qemu \
+    uml-utilities \
+    virt-manager \
+    libguestfs-tools \
+    spice-vdagent"
+  PKGS_MISC: "
+    p7zip-full \
+    make \
+    dmg2img \
+    tilix \
+    bleachbit \
+    apt-rdepends"
+  PKGS_FLATPAK: "
+    org.kde.krita \
+    io.github.OpenToonz \
+    org.keepassxc.KeePassXC \
+    net.drawpile.drawpile \
+    dev.lapce.lapce \
+    com.boxy_svg.BoxySVG \
+    org.inkscape.Inkscape \
+    io.dbeaver.DBeaverCommunity \
+    im.riot.Riot \
+    org.apache.directory.studio \
+    com.github.tchx84.Flatseal \
+    org.gimp.GIMP \
+    org.kde.kwrite \
+    org.mozilla.firefox \
+    com.jgraph.drawio.desktop \
+    org.shotcut.Shotcut"
+  PKGS_CARGO: "
+    ripgrep \
+    fd-find \
+    viu"
+  PKGS_CARGO_LOCKED: "
+    zellij"
+
+tasks:
+  default:
+    cmds:
+      - task: --list-all
+  deploy:
+    cmds:
+      - task: packages:remove
+      - task: packages:install:tools:base
+      - task: packages:install:tools:shell
+      - task: packages:install:flatpak
+      - task: packages:install:cargo
+      - task: packages:install:misc
+      - task: packages:install:virtualization
+    interactive: true
+
+  packages:remove:
+    cmds:
+      - apt remove {{.PKGS_REMOVE}}
+      - rm -rf ~/.firefox
+  packages:install:tools:base:
+    cmds:
+      - apt install {{.PKGS_TOOLS_BASE}}
+  packages:install:tools:shell:
+    deps:
+      - packages:install:tools:shell:zinit
+      - packages:install:tools:shell:rustup
+      - packages:install:tools:shell:volta
+      - packages:install:tools:shell:uv
+      # - packages:install:tools:shell:ollama
+
+  packages:install:tools:shell:zinit:
+    cmd: curl --fail --show-error --silent --location "https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh" | sh
+    interactive: true
+  packages:install:tools:shell:volta:
+    cmd: curl --fail --show-error --silent --location "https://get.volta.sh" | zsh
+    interactive: true
+  packages:install:tools:shell:uv:
+    cmd: curl --fail --show-error --silent --location "https://astral.sh/uv/install.sh" | sh
+    interactive: true
+  packages:install:tools:shell:rustup:
+    cmd: curl --fail --show-error --silent --location "https://sh.rustup.rs" | sh
+    interactive: true
+  packages:install:tools:shell:ollama:
+    cmd: curl --fail --show-error --silent --location "https://ollama.com/install.sh" | sh
+    interactive: true
+
+  packages:install:flatpak:
+    cmd: flatpak install -y {{.PKGS_FLATPAK}}
+  packages:install:cargo:
+    cmds:
+      - ~/.cargo/bin/cargo install {{.PKGS_CARGO}}
+      - ~/.cargo/bin/cargo install --locked {{.PKGS_CARGO_LOCKED}}
+
+  packages:install:virtualization:
+    cmd: apt install {{.PKGS_VT}}
+    interactive: true
+  packages:install:misc:
+    cmd: apt install {{.PKGS_MISC}}
+    interactive: true
