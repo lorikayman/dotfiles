@@ -1,16 +1,16 @@
 keybind = alt+t=new_tab
-keybind = alt+ctrl+left=previous_tab
-keybind = alt+ctrl+right=next_tab
+keybind = alt+shift+left=previous_tab
+keybind = alt+shift+right=next_tab
 
 keybind = alt+up=goto_split:top
 keybind = alt+down=goto_split:bottom
 keybind = alt+left=goto_split:left
 keybind = alt+right=goto_split:right
 
-keybind = alt+shift+left=new_split:left
-keybind = alt+shift+right=new_split:right
-keybind = alt+shift+up=new_split:up
-keybind = alt+shift+down=new_split:down
+keybind = alt+ctrl+left=new_split:left
+keybind = alt+ctrl+right=new_split:right
+keybind = alt+ctrl+up=new_split:up
+keybind = alt+ctrl+down=new_split:down
 
 keybind = ctrl+q=close_surface
 keybind = alt+q=close_surface
@@ -25,6 +25,7 @@ keybind = ctrl+v=paste_from_clipboard
 keybind = alt+v=paste_from_clipboard
 #keybind = unconsumed:ctrl+c=copy_to_clipboard
 keybind = alt+c=copy_to_clipboard
+keybind = unconsumed:ctrl+shift+d=ignore
 
 confirm-close-surface=false
 
