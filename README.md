@@ -10,7 +10,7 @@ Dotfiles managed with [chezmoi](https://github.com/twpayne/chezmoi)
 Apply:
 
 ```shell
-sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply ironkayman
+sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply lorikayman
 ```
 
 
@@ -24,6 +24,7 @@ Invoke-WebRequest -Uri "https://aka.ms/getwinget" -OutFile "$env:TEMP\Microsoft.
 
 winget install Task.task
 winget install chezmoi
+chezmoi init --apply lorikayman
 task --taskfile "$(Get-Location)/.local/share/chezmoi/deploy.windows.yml" deploy
 ```
 
