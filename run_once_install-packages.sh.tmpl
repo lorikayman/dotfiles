@@ -6,8 +6,6 @@ sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b ~/.local/bin
 
 {{ else if eq .chezmoi.os "windows" -}}
 
-winget install Task.task
-
 task --taskfile "$(Get-Location)/.local/share/chezmoi/deploy.windows.yml" deploy
 
 {{ end -}}
