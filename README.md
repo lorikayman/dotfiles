@@ -84,6 +84,9 @@ Zed default keymap, except for:
 | Terminal::Copy selection | Ctrl c |
 | Terminal::Paste selection | Ctrl v |
 
+~~As it doesn't die on browseing TB's codebase~~
+
+
 ### [Krita](https://krita.org/en/)
 
 *`.var/app/org.kde.krita/config/private_kritashortcutsrc`*
