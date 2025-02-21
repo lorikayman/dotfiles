@@ -13,6 +13,20 @@ Apply:
 sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply ironkayman
 ```
 
+
+Windows prerequisites:
+
+```ps
+Invoke-WebRequest -Uri "https://aka.ms/getwinget" -OutFile "$env:TEMP\Microsoft.WinGet.msixbundle" | Out-Null; Add-AppxPackage -Path "$env:TEMP\Microsoft.WinGet.msixbundle"
+
+[System.Environment]::SetEnvironmentVariable("Path", "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\Llvm\x64\bin;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.38.33130\bin\Hostx64\x64;C:\Program Files\Git\bin\;C:\Program Files\Git;C:\Program Files\nodejs\;%UserProfile%\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Python311\;%UserProfile%\.cargo\bin;%UserProfile%\.rustup\toolchains\1.76-x86_64-pc-windows-msvc\bin;C:\Program Files\NASM\", "User")
+
+winget install Task.task
+winget install chezmoi
+sudo config --enable normal
+task --taskfile "$(Get-Location)/.local/share/chezmoi/deploy.windows.yml" deploy
+```
+
 <p align="center">
     <img src="docs/color_scheme_example.png" style="width: 35%;"></img>
 </p>
@@ -35,19 +49,6 @@ sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply ironkayman
 *`.zchrc`*
 
 [ZSH](https://wiki.archlinux.org/title/Zsh) shell is configured with [Zinit](https://github.com/zdharma-continuum/zinit) plugin manager and [Pure prompt](https://github.com/sindresorhus/pure) recolor.
-
-Windows prerequisites:
-
-```powershell
-Invoke-WebRequest -Uri "https://aka.ms/getwinget" -OutFile "$env:TEMP\Microsoft.WinGet.msixbundle" | Out-Null; Add-AppxPackage -Path "$env:TEMP\Microsoft.WinGet.msixbundle
-
-[System.Environment]::SetEnvironmentVariable("Path", "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\Llvm\x64\bin;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.38.33130\bin\Hostx64\x64;C:\Program Files\Git\bin\;C:\Program Files\Git;C:\Program Files\nodejs\;%UserProfile%\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Python311\;%UserProfile%\.cargo\bin;%UserProfile%\.rustup\toolchains\1.76-x86_64-pc-windows-msvc\bin;C:\Program Files\NASM\", "User")
-
-winget install Task.task
-winget install chezmoi
-sudo config --enable normal
-task --taskfile "$(Get-Location)/.local/share/chezmoi/deploy.windows.yml" deploy
-```
 
 ## .⚙️ Configurations
 
