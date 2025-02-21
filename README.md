@@ -10,7 +10,7 @@ Dotfiles managed with [chezmoi](https://github.com/twpayne/chezmoi)
 Apply:
 
 ```shell
-sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply lorikayman
+sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply lorikayman && ~/.local/share/chezmoi/packages.linux.sh
 ```
 
 Windows-specific:
@@ -27,8 +27,7 @@ winget install chezmoi
 Postinstall:
 
 ```sh
-sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b ~/.local/bin
-~/.local/bin/task --taskfile ~/.local/share/chezmoi/packages.linux.yml deploy
+~/.local/share/chezmoi/packages.linux.sh
 ```
 
 ```powershell
