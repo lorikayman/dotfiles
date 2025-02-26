@@ -165,17 +165,17 @@
     }
   },
   {
-    "context": "Editor && mode == full && inline_completion",
+    "context": "Editor && mode == full && edit_prediction",
     "bindings": {
-      "alt-]": "editor::NextInlineCompletion",
-      "alt-[": "editor::PreviousInlineCompletion",
-      "alt-right": "editor::AcceptPartialInlineCompletion"
+      "alt-]": "editor::NextEditPrediction",
+      "alt-[": "editor::PreviousEditPrediction",
+      "alt-right": "editor::AcceptPartialEditPrediction"
     }
   },
   {
-    "context": "Editor && !inline_completion",
+    "context": "Editor && !edit_prediction",
     "bindings": {
-      "alt-\\": "editor::ShowInlineCompletion"
+      "alt-\\": "editor::ShowEditPrediction"
     }
   },
   {
@@ -350,38 +350,14 @@
       "ctrl-alt-s": "workspace::SaveAll",
       "ctrl-k m": "language_selector::Toggle",
       "escape": "workspace::Unfollow",
-      "alt-left": [
-        "workspace::ActivatePaneInDirection",
-        "Left"
-      ],
-      "alt-right": [
-        "workspace::ActivatePaneInDirection",
-        "Right"
-      ],
-      "alt-up": [
-        "workspace::ActivatePaneInDirection",
-        "Up"
-      ],
-      "alt-down": [
-        "workspace::ActivatePaneInDirection",
-        "Down"
-      ],
-      "ctrl-k shift-left": [
-        "workspace::SwapPaneInDirection",
-        "Left"
-      ],
-      "ctrl-k shift-right": [
-        "workspace::SwapPaneInDirection",
-        "Right"
-      ],
-      "ctrl-k shift-up": [
-        "workspace::SwapPaneInDirection",
-        "Up"
-      ],
-      "ctrl-k shift-down": [
-        "workspace::SwapPaneInDirection",
-        "Down"
-      ],
+      "alt-left": "workspace::ActivatePaneLeft",
+      "alt-right": "workspace::ActivatePaneRight",
+      "alt-up": "workspace::ActivatePaneUp",
+      "alt-down": "workspace::ActivatePaneDown",
+      "ctrl-k shift-left": "workspace::SwapPaneLeft",
+      "ctrl-k shift-right": "workspace::SwapPaneRight",
+      "ctrl-k shift-up": "workspace::SwapPaneUp",
+      "ctrl-k shift-down": "workspace::SwapPaneDown",
       "ctrl-shift-x": "zed::Extensions",
       "ctrl-shift-r": "task::Rerun",
       "ctrl-alt-r": "task::Rerun",
@@ -404,9 +380,9 @@
     }
   },
   {
-    "context": "Editor && inline_completion && !showing_completions",
+    "context": "Editor && edit_prediction && !showing_completions",
     "bindings": {
-      "tab": "editor::AcceptInlineCompletion"
+      "tab": "editor::AcceptEditPrediction"
     }
   },
   {
@@ -602,8 +578,6 @@
   {
     "context": "FileFinder && !menu_open",
     "bindings": {
-      "ctrl-shift-p": "file_finder::SelectPrev",
-      "ctrl": "file_finder::OpenMenu",
       "ctrl-j": "pane::SplitDown",
       "ctrl-k": "pane::SplitUp",
       "ctrl-h": "pane::SplitLeft",

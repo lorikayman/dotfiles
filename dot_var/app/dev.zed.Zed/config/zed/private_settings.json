@@ -1,0 +1,126 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "ssh_connections": [
+    {
+      "host": "observatory.arpa",
+      "username": "kayman",
+      "projects": [
+        {
+          "paths": ["~/git/ironkayman.github.io"]
+        },
+        {
+          "paths": [
+            "~/git/research/voiselab/tts/tortoise-local"
+          ]
+        }
+      ]
+    }
+  ],
+  "assistant": {
+    "default_model": {
+      "provider": "ollama",
+      "model": "qwen2.5-coder:1.5b"
+    },
+    "version": "2"
+  },
+  // "language_models": {
+  //   "ollama": {
+  //     "low_speed_timeout_in_seconds": 300,
+  //     // "api_url": "http://127.0.0.1:11434",
+  //     "api_url": "http://observatory.arpa:11435",
+  //     "available_models": [
+  //       {
+  //         "name": "deepseek-r1:32b",
+  //         "display_name": "deepseek-r1:32b",
+  //         "max_tokens": 131072
+  //       },
+  //       {
+  //         "name": "deepseek-r1:7b",
+  //         "display_name": "deepseek-r1:7b",
+  //         "max_tokens": 13100
+  //       },
+  //       {
+  //         "name": "huihui_ai/qwen2.5-1m-abliterated:7b",
+  //         "display_name": "qwen2.5-1m-abliterated:7b",
+  //         "max_tokens": 1000000
+  //       }
+  //     ]
+  //   }
+  // },
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "soft_wrap": "bounded",
+  "preferred_line_length": 60,
+  "hard_tabs": false,
+  "tab_size": 2,
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Rosé Pine"
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Bearded Icon Theme",
+    "dark": "Bearded Icon Theme"
+  },
+  "base_keymap": "None",
+
+  // LSP
+  "auto_install_extensions": {
+    "cspell": false
+  },
+  "languages": {
+    "C++": {
+      "language_servers": ["!cspell"]
+    },
+    "C": {
+      "language_servers": ["!cspell"]
+    },
+    "Go": {
+      "language_servers": ["!cspell"]
+    },
+    "Zig": {
+      "language_servers": ["!cspell"]
+    },
+    "JSONC": {
+      "language_servers": ["!cspell"]
+    },
+    "JavaScript": {
+      "language_servers": [
+        "!cspell",
+        "typescript-language-server",
+        "!vtsls"
+      ]
+    },
+    "Python": {
+      "language_servers": ["!cspell"]
+    },
+    "Markdown": {
+      "language_servers": ["!cspell"]
+    },
+    "TypeScript": {
+      "language_servers": [
+        "typescript-language-server",
+        "!vtsls",
+        "!cspell"
+      ]
+    },
+    "TSX": {
+      "language_servers": [
+        "typescript-language-server",
+        "!vtsls",
+        "!cspell"
+      ]
+    }
+  }
+}
