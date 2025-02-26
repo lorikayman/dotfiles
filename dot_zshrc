@@ -62,7 +62,9 @@ zi light zsh-users/zsh-history-substring-search
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
-setopt appendhistory
+
+# Do not query the user before executing ‘rm *’ or ‘rm path/*’.
+setopt appendhistory RM_STAR_SILENT
 
 # Traps and binds
 # -----------------
@@ -75,6 +77,7 @@ export WORDCHARS="*?.[]~&;!#$%^{}<>'\""
 # Enable Ctrl+arrow key bindings for word jumping
 bindkey '^[[1;5C' forward-word     # Ctrl+right arrow
 bindkey '^[[1;5D' backward-word    # Ctrl+left arrow
+
 
 # https://github.com/zsh-users/zsh-history-substring-search
 bindkey "$terminfo[kcuu1]" history-substring-search-up
