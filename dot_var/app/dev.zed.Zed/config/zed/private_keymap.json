@@ -294,8 +294,8 @@
         { "close_pinned": false }
       ],
       "ctrl-shift-f": "project_search::ToggleFocus",
-      "ctrl-alt-g": "search::SelectNextMatch",
-      "ctrl-alt-shift-g": "search::SelectPrevMatch",
+      "ctrl-alt-shift-right": "search::SelectNextMatch",
+      "ctrl-alt-shift-left": "search::SelectPrevMatch",
       "ctrl-alt-shift-h": "search::ToggleReplace",
       "ctrl-alt-shift-l": "search::ToggleSelection",
       "alt-enter": "search::SelectAllMatches",
@@ -354,15 +354,10 @@
       "alt-right": "workspace::ActivatePaneRight",
       "alt-up": "workspace::ActivatePaneUp",
       "alt-down": "workspace::ActivatePaneDown",
-      "ctrl-k shift-left": "workspace::SwapPaneLeft",
-      "ctrl-k shift-right": "workspace::SwapPaneRight",
-      "ctrl-k shift-up": "workspace::SwapPaneUp",
-      "ctrl-k shift-down": "workspace::SwapPaneDown",
-      "ctrl-shift-x": "zed::Extensions",
-      "ctrl-shift-r": "task::Rerun",
-      "ctrl-alt-r": "task::Rerun",
-      "alt-t": "task::Rerun",
-      "alt-shift-t": "task::Spawn"
+      "alt-ctrl-down": "pane::SplitDown",
+      "alt-ctrl-up": "pane::SplitUp",
+      "alt-ctrl-left": "pane::SplitLeft",
+      "alt-ctrl-right": "pane::SplitRight"
     }
   },
   // Bindings that should be unified with bindings for more general actions
@@ -576,24 +571,6 @@
     }
   },
   {
-    "context": "FileFinder && !menu_open",
-    "bindings": {
-      "ctrl-j": "pane::SplitDown",
-      "ctrl-k": "pane::SplitUp",
-      "ctrl-h": "pane::SplitLeft",
-      "ctrl-l": "pane::SplitRight"
-    }
-  },
-  {
-    "context": "FileFinder && menu_open",
-    "bindings": {
-      "j": "pane::SplitDown",
-      "k": "pane::SplitUp",
-      "h": "pane::SplitLeft",
-      "l": "pane::SplitRight"
-    }
-  },
-  {
     "context": "TabSwitcher",
     "bindings": {
       "ctrl-up": "menu::SelectPrev",
@@ -630,14 +607,6 @@
       "shift-home": "terminal::ScrollToTop",
       "shift-end": "terminal::ScrollToBottom",
       "ctrl-shift-space": "terminal::ToggleViMode"
-    }
-  },
-  {
-    // Separate block with same context so these display in context menus
-    "context": "Terminal",
-    "bindings": {
-      "ctrl-c": "terminal::Copy",
-      "ctrl-v": "terminal::Paste"
     }
   }
 ]
