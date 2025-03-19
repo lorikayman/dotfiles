@@ -10,6 +10,7 @@ PKGS_TOOLS_BASE="
   wget"
 PKGS_VT="
   qemu \
+  qemu-system-arm \
   uml-utilities \
   virt-manager \
   libguestfs-tools \
