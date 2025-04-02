@@ -24,11 +24,7 @@ winget install chezmoi
 chezmoi init --apply lorikayman
 ```
 
-Postinstall:
-
-```sh
-~/.local/share/chezmoi/packages.linux.sh
-```
+Windows:
 
 ```powershell
 powershell.exe -ExecutionPolicy Bypass -File ".local\share\chezmoi\packages.windows.ps1"
