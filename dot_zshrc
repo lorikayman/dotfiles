@@ -154,6 +154,8 @@ alias zl='zellij'
 alias zcc="zig cc"
 alias zcxx="zig c++"
 
+alias j-last-log="sudo journalctl -b -1 -e"
+
 export PATH
 
 # scrollable less output with a wheel
