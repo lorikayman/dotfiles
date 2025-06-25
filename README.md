@@ -3,9 +3,7 @@
 Dotfiles managed with [chezmoi](https://github.com/twpayne/chezmoi)
 
 > [!CAUTION]
-> This is not intended to be used. Despite being a public repository, __this set of configurations is not intended for you__, nor do you likely gain much from using it due to personalized workflow.
->
-> Configuration setup is designed for debian-based (since `apt`) systems, **Pop!_Os** specifically.
+> This repository nor its __set of configurations is not intended to be used__ apart from research and/or study purposes, as its contents are designed specifically for a personalized workflow, extending to the utilized Operating Systems.
 
 Apply:
 
@@ -30,10 +28,6 @@ Windows:
 powershell.exe -ExecutionPolicy Bypass -File ".local\share\chezmoi\packages.windows.ps1"
 ```
 
-<p align="center">
-    <img src="docs/color_scheme_example.png" style="width: 35%;"></img>
-</p>
-
 ## Contents
 
 - [dotfiles](#dotfiles)
@@ -49,4 +43,8 @@ powershell.exe -ExecutionPolicy Bypass -File ".local\share\chezmoi\packages.wind
 
 ## .⚙️ Configurations
 
-Packages and flatpak applications that are installed on script execution are specified at `run_once_install-packages.sh`. Major navigational changes a listed below.
+Non-GUI packages and applications are installed through multiple package managers - including system and language-based ones.
+
+GUi applications are usually installed using Flatpak.
+
+For Windows, Winget and Nuget are used.
