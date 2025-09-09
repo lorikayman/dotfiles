@@ -20,4 +20,9 @@ PATH="$PATH:$BIN_VOLTA:$BIN_EMACS:$BIN_FLUTTER"
 export WASMER_DIR="$HOME/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
 
+# golang
+export GOROOT=~/.local/lib/go
+export PATH=$PATH:$GOROOT/bin
+export GOROOT
+
 export PATH
