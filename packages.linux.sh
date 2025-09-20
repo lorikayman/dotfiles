@@ -54,8 +54,9 @@ $CURL_ANY \
   sh -s -- -d -b $LOCAL_BIN
 $CURL_ANY \
   https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh | sh
+# pipe to zsh as a workaround for script failure in sh
 $CURL_ANY \
-  https://get.volta.sh | sh
+  https://get.volta.sh | zsh
 $CURL_ANY \
   https://astral.sh/uv/install.sh | sh
 $CURL_ANY \
