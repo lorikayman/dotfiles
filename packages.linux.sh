@@ -71,6 +71,9 @@ zsh -f -c 'source "$HOME/.zshrc"'
 sudo apt install $PKGS_VT
 sudo apt install $PKGS_MISC
 
+volta install node@lts
+volta install npm
+
 $CURL_ANY \
   https://github.com/sj14/epoch/releases/download/v0.2.2/epoch_0.2.2_linux_amd64 \
   --output "$LOCAL_BIN/epoch"
