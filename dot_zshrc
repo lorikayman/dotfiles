@@ -1,11 +1,4 @@
 #!/bin/sh
 
-source "$HOME/.config/zsh/zinit.sh"
+source "$HOME/.config/zsh/zsh.sh"
 
-source "$HOME/.config/zsh/shell.sh"
-source "$HOME/.config/zsh/binds.sh"
-source "$HOME/.config/zsh/aliases.sh"
-source "$HOME/.config/zsh/paths.sh"
-source "$HOME/.config/zsh/storage.sh"
-
-source "$HOME/.config/zsh/_private/init.sh"
