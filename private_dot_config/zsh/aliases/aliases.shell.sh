@@ -1,6 +1,7 @@
 #!/bin/sh
 
 alias tx='tar --extract --file'
+alias dt='diff --text --recursive --color'
 alias wget-any='wget \
   --tries 5 \
   --retry-connrefused \
@@ -21,7 +22,7 @@ alias curl-any='curl \
 
 alias t='task'
 
-alias v='nvim || vim'
+alias v='vim'
 alias fk='flatpak'
 
 alias ll='ls -alF'
