@@ -35,7 +35,23 @@ PKGS_FLATPAK="
   com.github.tchx84.Flatseal \
   org.keepassxc.KeePassXC \
   org.kde.kwrite \
-  org.kde.krita"
+  io.github.kolunmi.Bazaar \
+  org.mozilla.Thunderbird \
+  com.collaboraoffice.Office \
+  dev.zed.Zed \
+  io.dbeaver.DBeaverCommunity \
+  com.jgraph.drawio.desktop \
+  org.kde.krita \
+  org.gimp.GIMP \
+  net.drawpile.drawpile \
+  org.inkscape.Inkscape \
+  com.boxy_svg.BoxySVG \
+  org.blender.Blender \
+  io.github.OpenToonz \
+  com.obsproject.Studio \
+  org.remmina.Remmina \
+  com.rustdesk.RustDesk \
+"
 PKGS_RUST_LOCKED="
   ripgrep \
   zellij \
