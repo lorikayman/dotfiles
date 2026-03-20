@@ -1,0 +1,56 @@
+{
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "z",
+    ): System(InputSourceSwitch),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "s",
+    ): NextWorkspace,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "n",
+    ): Focus(In),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Cyrillic_ya",
+    ): System(InputSourceSwitch),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Cyrillic_yeru",
+    ): NextWorkspace,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Cyrillic_tse",
+    ): PreviousWorkspace,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "i",
+    ): Disable,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "w",
+    ): PreviousWorkspace,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "space",
+    ): Disable,
+}
