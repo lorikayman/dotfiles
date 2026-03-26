@@ -33,3 +33,5 @@ alias cz='chezmoi'
 alias zl='zellij'
 
 alias journalctl-last-log="sudo journalctl -b -1 -e"
+
+alias yt='uv tool run yt-dlp --js-runtimes node --remote-components ejs:github "$@" -x --audio-quality 0 --split-chapters'
