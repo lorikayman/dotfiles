@@ -41,4 +41,4 @@ export LESS=-R
 
 export EDITOR=vim
 
-xmodmap "$HOME/.Xmodmap"
+#xmodmap "$HOME/.Xmodmap"
